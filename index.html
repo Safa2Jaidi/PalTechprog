@@ -396,10 +396,15 @@ transform: translateX(-50%); /* لتحريك العنصر للوسط   نسبة 
 </div>
 
 <script>
-document.getElementById('myBox').onclick = function() {
-  window.location.href = 'الرابط_هنا';
-};
-</script>
+  document.getElementById('myBox').onclick = function() {
+    var box = this;
+    box.classList.add('show-tooltip');
+    setTimeout(function() {
+      box.classList.remove('show-tooltip');
+      window.location.href = 'الرابط_هنا';
+    }, 2000); // تأخير لمدة ثانيتين قبل فتح الرابط
+  };
+  </script>
 
 
 <!-- أضف هذا الكود داخل الجسم <body> حيث تريد ظهور الجدول -->
