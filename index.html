@@ -143,6 +143,58 @@ animation: marquee-animation 40s linear infinite;
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
+
+  #myBox {
+    border: 1px solid black;
+    position: absolute;
+    left: 10px;
+    top: 160px;
+    cursor: pointer;
+    padding: 2px; /* الهوامش من كل الجوانب */
+    text-align: right; /* محاذاة النص من اليمين */
+  }
+
+  #myBox:hover {
+    background-color: #color; /* ضع اللون المطلوب هنا */
+    color: #color; /* ضع لون النص المطلوب عند الهوفر هنا */
+  }
+
+  #myBox p {
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    #myBox p {
+      font-size: smaller; /* أو يمكنك تحديد حجم معين بالبكسل */
+    }
+  }
+
+  .tooltip {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  #myBox:hover .tooltip {
+    visibility: visible;
+    animation: fadeinout 2s linear forwards; /* تظهر لمدة ثانيتين ثم تختفي */
+  }
+
+  @keyframes fadeinout {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+
+
+  
   </style>
 
 </head>
@@ -232,6 +284,8 @@ animation: marquee-animation 40s linear infinite;
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <style>
   body {
     margin: 0;
@@ -333,6 +387,20 @@ transform: translateX(-50%); /* لتحريك العنصر للوسط   نسبة 
   });
 </script>
 </body>
+
+
+<div id="myBox">
+  <p>وماذا بعد؟</p>
+  <p>ماذا تعرف عن فايربيس؟</p>
+  <span class="tooltip">قريباً.. مرورك مقدر</span>
+</div>
+
+<script>
+document.getElementById('myBox').onclick = function() {
+  window.location.href = 'الرابط_هنا';
+};
+</script>
+
 
 <!-- أضف هذا الكود داخل الجسم <body> حيث تريد ظهور الجدول -->
   <div class="table-container">
