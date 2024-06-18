@@ -140,18 +140,18 @@ animation: marquee-animation 40s linear infinite;
 
 
   #myBox {
-    border: 1px solid black;
+    border: 3px solid #343a40;
     position: absolute;
     left: 10px;
-    top: 160px;
+    top: 140px;
     cursor: pointer;
-    padding: 2px; /* الهوامش من كل الجوانب */
+    padding: 5px; /* الهوامش من كل الجوانب */
     text-align: right; /* محاذاة النص من اليمين */
   }
 
   #myBox:hover {
-    background-color: #color; /* ضع اللون المطلوب هنا */
-    color: #color; /* ضع لون النص المطلوب عند الهوفر هنا */
+    background-color: #343a40; /* ضع اللون المطلوب هنا */
+    color: #f2f2f2; /* ضع لون النص المطلوب عند الهوفر هنا */
   }
 
   #myBox p {
@@ -167,8 +167,8 @@ animation: marquee-animation 40s linear infinite;
   .tooltip {
     visibility: hidden;
     width: auto;
-    background-color: black;
-    color: white;
+    background-color: #343a40;
+    color: #f2f2f2;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
@@ -178,7 +178,7 @@ animation: marquee-animation 40s linear infinite;
 
   #myBox:hover .tooltip {
     visibility: visible;
-    animation: fadeinout 2s linear forwards; /* تظهر لمدة ثانيتين ثم تختفي */
+    animation: fadeinout 3s linear forwards; /* تظهر لمدة ثانيتين ثم تختفي */
   }
 
   @keyframes fadeinout {
