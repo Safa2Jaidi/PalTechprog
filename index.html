@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <title>التكنولوجيا والبرمجة/قلقيلية qTp</title>
-  <link rel="icon" href="qalTechprog.png"/>
+  <title>التكنولوجيا والبرمجة/فلسطين Ptp</title>
+  <link rel="icon" href="PalTechprog.png"/>
   <style>
 
 
@@ -37,7 +37,6 @@
 }
 
 
-/* Start animation after a delay of 2 seconds */
 .marquee span {
   display: inline-block;
   padding-left: 100%;
@@ -46,8 +45,6 @@ animation: marquee-animation 40s linear infinite;
     animation-delay: 0s; 
     font-family: 'Simplified Arabic', sans-serif;
 }
-
-
 
 .marquee:hover {
     color: #f2f2f2;
@@ -80,11 +77,9 @@ animation: marquee-animation 40s linear infinite;
   max-font-size: 18px; /* حد أقصى لحجم الخط */
   overflow: hidden; /* إخفاء النص الزائد */
   text-overflow: ellipsis; /* إضافة نقاط الحذف إذا كان النص أطول */
-  white-space: nowrap; /* النص في سطر واحد */
-  
-    
-    
+  white-space: nowrap; /* النص في سطر واحد */  
   }
+
   .my-button:hover {
     background-color: #343a40; /* تغيير لون الخلفية عند المرور بالماوس */
   }
@@ -108,9 +103,8 @@ animation: marquee-animation 40s linear infinite;
   overflow: hidden; /* إخفاء النص الزائد */
   text-overflow: ellipsis; /* إضافة نقاط الحذف إذا كان النص أطول */
   white-space: nowrap; /* النص في سطر واحد */
-    
-    
   }
+  
   .my-buttoncopy:hover {
     background-color: #343a40; /* تغيير لون الخلفية عند المرور بالماوس */
   }
@@ -119,13 +113,12 @@ animation: marquee-animation 40s linear infinite;
   .logo {
     width: 100px; /* عرض الصورة*/
     height: 100px;/* ارتفاع الصورة*/
-    transition: top 2s ease-in-out; /* تأثير انتقالي للصورة*/
     position: fixed;/* الصورة ثابتة في مكان محدد*/
     top: -100px; /* بداية خارج الشاشة */
     left: 10px; /* تبتعد عن الحافة اليسرى للصفحة بمقدار 10 بكسل */
     background-size: cover; /* تغطية المساحة المحددة بالصورة */
     z-index: 9999; /* زيادة القيمة لتظهر فوق الجميع */
-    background-image: url('qalTechprog.png'); /* استبدل بمسار صورتك */
+    background-image: url('PalTechprog.png'); /* استبدل بمسار صورتك */
   }
   .logo:hover {
     animation: shake 2s ease-in-out infinite; /* تأثير اهتزاز عند تمرير الماوس */
@@ -144,6 +137,62 @@ animation: marquee-animation 40s linear infinite;
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
+
+  #myBox {
+    font-family:'Simplified Arabic', sans-serif;
+    border: 3px solid #343a40;
+    position: absolute;
+    left: 10px;
+    top: 140px;
+    cursor: pointer;
+    padding: 5px; /* الهوامش من كل الجوانب */
+    text-align: right; /* محاذاة النص من اليمين */
+  }
+
+  #myBox:hover {
+    background-color: #343a40; /* ضع اللون المطلوب هنا */
+    color: #f2f2f2; /* ضع لون النص المطلوب عند الهوفر هنا */
+  }
+
+  #myBox p {
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    #myBox p {
+      font-size: smaller; /* أو يمكنك تحديد حجم معين بالبكسل */
+    }
+  }
+
+  .tooltip {
+    visibility: hidden;
+    width: auto;
+    height: 30px;
+    margin-top: 10px;
+    background-color: #343a40;
+    color: #f2f2f2;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    font-family:'Simplified Arabic', sans-serif;
+    position: absolute;
+    z-index: 1;
+  }
+
+  #myBox:hover .tooltip {
+    visibility: visible;
+    animation: fadeinout 3s linear forwards; /* تظهر لمدة ثانيتين ثم تختفي */
+  }
+
+  @keyframes fadeinout {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+
+
+  
   </style>
 
 </head>
@@ -233,6 +282,8 @@ animation: marquee-animation 40s linear infinite;
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <style>
   body {
     margin: 0;
@@ -293,6 +344,24 @@ transform: translateX(-50%); /* لتحريك العنصر للوسط   نسبة 
   color: #f2f2f2; /* تغيير لون النص عند مرور المؤشر */
 }
 
+.button-cell-Safa2 {
+  width: 100px; /* عرض الخلية */
+  height: 30px; /* ارتفاع الخلية */
+  border: none; /* إزالة الحدود */
+  margin: 0; /* إزالة التباعد بين الخلايا */
+  background-color: #f6bc00; /* لون خلفية الخلية */
+  text-align: center; /* محاذاة النص في الوسط */
+  color: black; /* لون النص */
+  font-size: 1em; /* حجم النص */
+  font-family: 'Simplified Arabic', sans-serif; /* نوع الخط */
+  cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الخلية */
+  transition: background-color 1s; /* فترة التأثير الانتقالي للون الخلفية */
+}
+.button-cell-Safa2:hover {
+  background-color: #343a40; /* تغيير لون الخلفية عند مرور المؤشر */
+  color: #f2f2f2; /* تغيير لون النص عند مرور المؤشر */
+}
+
 /* أضف هذا الكود داخل علامات <style> في الرأس <head> */
   .table-container {
   position: relative; /* تحديد موضع الجدول بالنسبة لموضعه الطبيعي */
@@ -309,7 +378,20 @@ transform: translateX(-50%); /* لتحريك العنصر للوسط   نسبة 
   }
 }
 
-
+.table-container-Safa2 {
+  position: absolute;
+    top: 300px; 
+  display: flex; /* يستخدم لتحديد تخطيط الفليكس */
+  flex-direction: row; /* الاتجاه الافتراضي للفليكس هو الصف */
+  justify-content: center; /* محاذاة العناصر أفقيًا في المركز */
+  align-items: center; /* محاذاة العناصر عموديًا في المركز */
+  width: 100%; /* يجعل الحاوية تمتد عبر العرض الكامل للصفحة */
+}
+@media (max-width: 768px) {
+  .table-container-Safa2 {
+    flex-direction: column; /* تغيير الاتجاه إلى عمودي عند صغر الشاشة */
+  }
+}
 </style>
 </head>
 <body>
@@ -335,16 +417,41 @@ transform: translateX(-50%); /* لتحريك العنصر للوسط   نسبة 
 </script>
 </body>
 
+
+<div id="myBox">
+  <p>ماذا بعد؟</p>
+  <p>ماذا تعرف عن فايربيس؟</p>
+  <span class="tooltip">قريباً.. مرورك مقدر</span>
+</div>
+
+<script>
+  document.getElementById('myBox').onclick = function() {
+    var box = this;
+    box.classList.add('show-tooltip');
+    setTimeout(function() {
+      box.classList.remove('show-tooltip');
+      window.location.href = 'https://safa2jaidi.github.io/qalTechprog/Firebase.html';
+    }, 2000); // تأخير لمدة ثانيتين قبل فتح الرابط
+  };
+  </script>
+
+
 <!-- أضف هذا الكود داخل الجسم <body> حيث تريد ظهور الجدول -->
   <div class="table-container">
     <!-- عند النقر على النص، يتم فتح الرابط المحدد -->
-    <div class="button-cell" onclick="window.location.href='comment.html'">نموذج (1)</div>
-    <div class="button-cell" onclick="window.location.href='mycomment.html'">نموذج (2)</div>
+    <div class="button-cell" onclick="window.location.href='https://safa2jaidi.github.io/qalTechprog/comment.html'">نموذج (1)</div>
+    <div class="button-cell" onclick="window.location.href='https://safa2jaidi.github.io/qalTechprog/mycomment.html'">نموذج (2)</div>
+  </div>
+
+  <div class="table-container-Safa2">
+    <!-- عند النقر على النص، يتم فتح الرابط المحدد -->
+    <div class="button-cell-Safa2" onclick="window.location.href='https://safa2jaidi.github.io/Shar3iaGirlsSchool/'">المدرسة</div>
+    <div class="button-cell-Safa2" onclick="window.location.href='https://safa2jaidi.github.io/qalTechprog/'">اللجنة</div>
   </div>
   
 
 <div class="copyright">
-  © التكنولوجيا والبرمجة/قلقيلية qTp
+  © التكنولوجيا والبرمجة/فلسطين PTp
 </div>
 
 <body>
