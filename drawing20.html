@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>نشير إليها والبقية عليك</title>
+<style>
+
+html {
+  overflow: hidden;
+  background: #0000;
+  min-height: 100vh;
+  background:
+    repeating-conic-gradient(from -5deg at 45% 50%, #0000 0 10deg, #fff3 0 20deg),
+    #acf;
+}
+
+/*
+
+Based on https://i.pinimg.com/originals/f0/0d/bc/f00dbca45721ebf0b94da64c9c9fff1c.png
+
+*/
+article {
+  --beak: #ffc222;
+  --beak-dark: #fc9100;
+  --tongue: #fed4ce;
+  --feather: #fff;
+  --eye: #bfdeed;
+  --hat: #0084bf;
+  --line: #000;
+  color: var(--line);
+  font-size: 1vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42em;
+  aspect-ratio: 7/10;
+  
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  .face {
+    width: 66%;
+    height: 39%;
+    border: 0.8em solid;
+    border-top: 0.5em solid;
+    border-radius: 50%;
+    top: 34.75%;
+    background: var(--feather);
+  }
+  
+  .eyebrow {
+    width: 32%;
+    height: 40%;
+    background: var(--feather);
+    border-radius: 50%;
+    top: 29.5%;
+    left: 12.5%;
+    transform: rotate(-8deg);
+    border: 0.1em solid #0000;
+    border-top: 1em solid;
+    
+    & ~ & {
+      left: 52.5%;
+      top: 36%;
+      width: 18.5%;
+      transform: rotate(4deg);
+      border-right: 0.7em solid var(--line);
+      border-bottom-width: 2em;
+      border-left-width: 0.3em;
+      border-radius: 100% / 90% 90% 110% 120%;
+    }
+  }
+  
+  .eye {
+    width: 26%;
+    height: 41%;
+    background: var(--eye);
+    top: 37%;
+    left: 15%;
+    border-radius: 100% / 110% 110% 94% 90%;
+    border: 0.8em solid;
+    border-top-width: 0.6em;
+    border-bottom-width: 0.25em;
+    
+    &::before {
+      content: "";
+      width: 45%;
+      height: 43%;
+      background: var(--line);
+      border-radius: 50%;
+      top: 48%;
+      left: 5.5%;
+      transform: rotate(-6deg);
+    }
+    
+    & ~ & {
+      left: 58%;
+      top: 42%;
+      width: 13%;
+      height: 26%;
+      border-radius: 100% / 110% 110% 94% 60%;
+      transform: rotate(0deg);
+      border-bottom-width: 0.4em;
+      box-shadow: -2em 0 var(--feather), -0.3em 3em 0 -0.1em var(--beak);
+      
+      &::before {
+        width: 75%;
+        height: 42%;
+        top: 58%;
+        left: -25%;
+        transform: rotate(0);
+      }
+    }
+  }
+  
+  .hair {
+    width: 20%;
+    height: 15%;
+    background: #f003;
+    border-radius: 50%;
+    top: 35%;
+    left: 38%;
+    background: var(--feather);
+    box-shadow: 
+      1.25em -0.5em 0 -0.5em,
+      -0.5em 0em 0 1em var(--feather),
+      1.75em -1.75em,
+      -0.5em -1.85em 0 1em var(--feather)
+      ;
+    &::before {
+      content: "";
+      width: 110%;
+      height: 100%;
+      border-radius: 48%;
+      top: -116%;
+      left: -83%;
+      box-shadow:
+        0.5em 1.75em 0 -0.5em var(--feather),
+        1.75em 1.5em 0 -1em;
+    }
+  }
+  
+  .neck {
+    width: 20%;
+    height: 12.5%;
+    border-radius: 80%;
+    border-left: 0.7em solid;
+    border-bottom: 0.7em solid var(--feather);
+    border-top: 0.1em solid #0000;
+    left: 1%;
+    top: 58%;
+    background: var(--feather);
+  }
+  
+  .beak-bottom, .beak-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    
+    .beak-side {
+      width: 25%;
+      height: 9.5%;
+      border: 0.5em solid;
+      border-right-width: 0.6em;
+      border-radius: 50%;
+      background: var(--beak);
+      transform: rotate(-25deg);
+      top: 63%;
+      left: 52%;
+      
+      &::after {
+        content: "";
+        width: 25%;
+        height: 26%;
+        border-radius: 50%;
+        border-top: 0.5em solid;
+        top: 50%;
+        left: 70%;
+      }
+      
+      &::before {
+        content: "";
+        width: 35%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 0.5em solid #0000;
+        border-left: 0.6em solid;
+        top: 40%;
+        left: 72%;
+        transform: rotate(-10deg);
+      }
+    }
+    
+    .beak-back {
+      width: 55%;
+      height: 50%;
+      border: 0.75em solid;
+      background: var(--beak);
+      border-radius: 100% / 80% 80% 160% 130%;
+      transform: rotate(-8deg) skewY(-8deg) rotate(-10deg);
+      top: 50%;
+      left: 15%;
+      clip-path: polygon(0 50%, 20% 40%, 100% 50%, 100% 100%, 0 100%);
+      
+      &::before {
+        content: "";
+        width: 86%;
+        height: 90%;
+        border: 0.6em solid;
+        background: var(--beak-dark);
+        border-radius: 100% / 80% 80% 160% 130%;
+        top: 5%;
+        left: 7%;
+        opacity: 1;
+      }
+      
+      &::after {
+        content: "";
+        top: 47%;
+        left: 21%;
+        width: 40%;
+        height: 30%;
+        border: 0.5em solid #0000;
+        border-bottom: 0.6em solid;
+        border-radius: 50%;
+        transform: rotate(-70deg);
+        background:
+          radial-gradient(150% 150% at -20% 16%, #0000 50%, var(--line) 0 55%, var(--tongue) 0) no-repeat;
+      }
+    }
+    
+    .lip {
+      width: 45%;
+      height: 8%;
+      border-radius: 80% 35% 35% 50% / 100% 60% 60% 0;
+      border: 0.8em solid;
+      rotate: -0deg;
+      top: 69%;
+      left: 49%;
+      border-bottom: 0.5em solid;
+      border-left: 0.4em solid;
+      clip-path: polygon(25% 50%, 50% 50%, 0 60%, 0 0, 100% 0, 100% 100%, 31% 100%);
+      background: var(--beak);
+    }
+    
+    .top-beak {
+      width: 58%;
+      height: 18%;
+      border-left: 0.8em solid;
+      border-bottom: 0.7em solid;
+      transform: skewX(27deg);
+      border-radius: 0 0 0 30%;
+      clip-path: polygon(-10% 10%, -10% -10%, 10% -10%, 18% 50%, 100% 100%, 0 100%);
+      rotate: -14deg;
+      top: 62.5%;
+      left: 16%;
+      background: var(--beak);
+      
+      &::after {
+        content: "";
+        width: 13%;
+        height: 25%;
+        border-radius: 50%;
+        border-top: 0.75em solid;
+        top: -3%;
+        left:-8%;
+        rotate: 35deg;
+      }
+    }
+    
+    .top-curve {
+      width: 50%;
+      height: 11%;
+      background:
+        radial-gradient(75% 100% at 51% 100%, var(--beak) 91%, var(--line) 0 99%, #0000 0) 100% 100% / 52.5% 100%,
+         radial-gradient(70% 100% at 49% -30%, #0000 90%, var(--line) 0 99%, var(--beak) 0) 8.25% 0% / 43.5% 100%,
+        #f000;
+      background-repeat: no-repeat;
+      top: 65%;
+      left: 15%;
+      clip-path: polygon(0 0, 95% 0, 95% 100%, 0 100%)
+    }
+    
+    .bottom-curve {
+      width: 43%;
+      height: 9.5%;
+      border: 0.8em solid;
+      border-radius: 15em;
+      transform: rotate(49deg) skewY(2deg);
+      transform-origin: 0 100%;
+      top: 57.5%;
+      left: -2%;
+      background: var(--beak);
+      clip-path: polygon(0 0, 63% 0, 71% 100%, 0 100%);
+    }
+  }
+  
+  .hat {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    .hat-top {
+      width: 48%;
+      height: 42%;
+      border: 1em solid;
+      border-radius:  100% 100% 0% 100%;
+      border-bottom: 0em solid #fff0;
+      rotate: -30deg;
+      top: -1%;
+      left: 19%;
+      clip-path: polygon(0 0, 100% 0, 100% 40%, 96% 100%, 0 100%);
+      background: var(--hat);
+    }
+    
+    .hat-bottom {
+      width: 31%;
+      height: 30%;
+      border: 0.8em solid;
+      border-radius:  0% 90% 100% 100%;
+      border-top: 0em solid #fff0;
+      rotate: -60deg;
+      top: 20.5%;
+      left: 52.5%;
+      clip-path: polygon(0 0, 100% 0, 100% 40%, 96% 100%, 0 100%);
+      background: var(--hat);
+    }
+    
+    .hat-base {
+      width: 40%;
+      height: 25%;
+      background: var(--line);
+      border-radius: 100% / 40%;
+      transform: rotate(30deg);
+      top: 24.5%;
+      left: 22.5%;
+    }
+    
+    .hat-deco {
+      width: 40%;
+      height: 40%;
+      top: 40%;
+      right: 1%;
+      border-radius: 50%;
+      box-shadow: inset -5.25em -1em var(--line);
+      clip-path: polygon(0 0, 100% 0, 100% 60%, 83% 42%, 20% 100%);
+    }
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <article role="img" aria-label="CSS Art version of Donald Duck">
+    <div class="hat">
+      <div class="hat-deco"></div>
+      <div class="hat-bottom"></div>
+      <div class="hat-top"></div>
+      <div class="hat-base"></div>
+    </div>
+    <div class="beak-bottom">
+      <div class="beak-side"></div>
+      <div class="beak-back"></div>
+    </div>
+    <div class="face"></div>
+    <div class="neck"></div>
+    <div class="hair"></div>
+    <div class="eyebrow"></div>
+    <div class="eyebrow"></div>
+    <div class="eye"></div>
+    <div class="eye"></div>
+    <div class="beak-top">
+      <div class="top-curve"></div>
+      <div class="bottom-curve"></div>
+      <div class="lip"></div>
+      <div class="top-beak"></div>
+    </div>
+  </article>
+  
+</body>
+</html>
