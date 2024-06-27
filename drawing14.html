@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-7723052651452107">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<title>نشير إليها والبقية عليك</title>
+<style>
+ body {
+  overflow: hidden;
+}
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80vmin;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+
+:root {
+  --skin: #fca;
+  --hair: #963;
+}
+
+.face {
+  width: 55%;
+  height: 50%;
+  border: 0.5vmin solid;
+  border-radius: 0 100% 100% 100%;
+  box-shadow: 0.25vmin 0.25vmin;
+  background: var(--skin);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.face::before {
+  content: "";
+  width: 23%;
+  aspect-ratio: 1;
+  background: var(--skin);
+  top: 60%;
+  border-radius: 50%;
+}
+
+.eye {
+  width: 50%;
+  height: 55%;
+  border-radius: 50%;
+  background:
+    radial-gradient(#fff 3%, #0000 0),
+    #fff radial-gradient(circle at 55% 55%, #000 10%, #0000 10.5%)
+    ;
+  border: 0.5vmin solid;
+  border-left: 0.75vmin solid;
+  left: 30%;
+  top: -30%;
+  box-shadow: inset 1vmin -0.3vmin 2vmin #0001
+}
+
+.eye ~ .eye {
+  left: -5%;
+  top: -15%;
+  background:
+    radial-gradient(circle at 55% 45%, #fff 3%, #0000 0),
+    #fff radial-gradient(circle at 60% 50%, #000 10%, #0000 10.5%)
+    ;
+/*   box-shadow: -5vmin 5vmin var(--skin) */
+}
+
+.nose {
+  width: 40%;
+  height: 30%;
+  border: 0.5vmin solid;
+  border-right: 0.75vmin solid;
+  top: 15%;
+  left: 45%;
+  border-radius: 100% 80% 80% 100% / 60% 80% 100% 50%;
+  background:
+    radial-gradient(circle at 100% 50%, #c002, #0000 70%)
+    ;
+  background-color: var(--skin);
+  border-left-color: var(--skin);
+  transform: rotate(-20deg);
+}
+
+.mouth {
+  width: 50%;
+  height: 30%;
+  border-radius: 50%;
+  border: 0.5vmin solid #0000;
+  border-left: 1vmin solid #0000;
+  border-bottom: 0.5vmin solid;
+  top: 40%;
+  left: 30%;
+}
+
+.mouth::before {
+  content: "";
+  width: 25%;
+  aspect-ratio: 1.25;
+  border-radius: 50%;
+  border: 0.25vmin solid #0000;
+  border-left: 0.75vmin solid;
+  top: 75%;
+  left: 10%;
+  transform: rotate(15deg);
+}
+
+.forehead {
+  width: 100%;
+  height: 100%;
+  left: -8%;
+  top: -5%;
+  background:
+    radial-gradient(150% 40% at -30% 0, #c004, #0000)
+    ;
+  background-color: var(--skin);
+  border-radius: 50% 50% 0 50%;
+  transform: translate(-20%, -60%);
+  border: 0.5vmin solid;
+  border-bottom-color: var(--skin);
+}
+
+.forehead::before {
+  content: "";
+  width: 20%;
+  aspect-ratio: 0.9;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  left: 84%;
+  top: 29%;
+  border-left: 1.5vmin solid #0000;
+  border-bottom: 1vmin solid;
+  background: var(--skin);
+  transform: rotate(33deg);
+}
+
+.ear {
+  width: 20%;
+  height: 30%;
+  border: 0.5vmin solid;
+  border-top: 0.75vmin solid;
+  border-radius: 100% / 80% 90% 90% 120%;
+  left: 54%;
+  top: 21%;
+  border-right: 0.75vmin solid #0000;
+  background: var(--skin);
+  transform: scaleX(-1) rotate(10deg);
+}
+
+.face .ear {
+  width: 45%;
+  height: 70%;
+  left: -41%;
+  top: 10%;
+  transform: rotate(-25deg);
+}
+
+.ear::before {
+  content: "";
+  width: 65%;
+  height: 70%;
+  border-radius: 50% 50%;
+  border: 0.5vmin solid;
+  border-right: 0.75vmin solid;
+  border-left: 0.5vmin solid #0000;
+  top: 18%;
+  left: 19%;
+  transform: rotate(-15deg);
+  box-shadow: inset -1.5vmin 1vmin 2vmin #c002;
+}
+
+.ear::after {
+  content: "";
+  width: 35%;
+  aspect-ratio: 1;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  border-right-color: #0000;
+  background: var(--skin);
+  top: 57%;
+  left: 53%;
+  transform: rotate(16deg);
+  box-shadow: -1vmin 0vmin 1vmin 0.25vmin #c002;
+}
+
+.eyebrow {
+  width: 45%;
+  aspect-ratio: 1;
+  border: 0.5vmin solid #0000;
+  border-top: 0.75vmin solid;
+  border-radius: 50%;
+  top: -27%;
+  left: -9%;
+  transform: rotate(-24deg);
+}
+
+.eyebrow + .eyebrow {
+  width: 42%;
+  top: -41%;
+  left: 29%;
+  transform: rotate(-17deg);
+}
+
+.hair-side,
+.hair-back {
+  width: 50%;
+  height: 65%;
+  border: 0.5vmin solid;
+  border-left: 0.75vmin solid;
+  border-top: 0.75vmin solid;
+  background: var(--hair);
+  border-radius: 100% / 80% 80% 120% 120%;
+  top: -40%;
+  left: -60%;
+  transform: rotate(-20deg);
+}
+
+.hair-back {
+  width: 30%;
+  height: 40%;
+  left: 34%;
+  top: 0%;
+  transform: rotate(-30deg);
+}
+
+.hair-top {
+  background: var(--hair);
+  border: 0.5vmin solid;
+  border-top: 0.75vmin solid;
+  border-left: 0.75vmin solid;
+  top: -90%;
+  left: -60%;
+  width: 120%;
+  height: 55%;
+  border-radius: 80% 120% 120% 80% / 100%;
+  transform: rotate(-15deg); 
+}
+
+.hair-top::before {
+  content: "";
+  width: 27%;
+  aspect-ratio: 1;
+  background: var(--hair);
+  border-radius: 50%;
+  top: 50%;
+  left: 3.5%
+}
+
+.neck {
+  width: 30%;
+  height: 40%;
+  background:
+    conic-gradient(from -0.12turn at 76% 120%, #000 0.03turn, #0000 0 0.2turn, #000 0 0.22turn, #fff 0) 50% 100% / 100% 9% no-repeat,
+    radial-gradient(circle at 120% 40%, #c003, #0000 70%)
+    ;
+  background-color: var(--skin);
+  top: 60%;
+  left: 20%;
+  border: 0.5vmin solid;
+  border-radius: 100% / 12%;
+}
+
+.neck::before {
+  content: "";
+  width: 200%;
+  height: 70%;
+  border-radius: 50%;
+  left: 47%;
+  transform: translate(-50%,0 );
+  border: 0.5vmin solid;
+  background:
+    radial-gradient(120% 90% at 60% 25%, #0000 20%, #000 0 22%, #0000 0)
+    ;
+  background-color: green;
+  top: 80%;
+  z-index: -1;
+}
+
+.shirt {
+  width: 30%;
+  height: 15%;
+  border: 0.5vmin solid;
+  top: 90%;
+  left: 7%;
+  background: #fff;
+  transform: rotate(20deg) skew(-10deg);
+  border-radius: 20% 0 0 10% / 100%
+}
+
+.shirt::before {
+  content: "";
+  border: 0.5vmin solid;
+  width: 40%;
+  height: 100%;
+  left: 130%;
+  top: -74%;
+  transform: rotate(-50deg) skew(10deg);
+  border-radius: 0 20% 10% 0 / 100%;
+  border-right: 0.6vmin solid;
+  background: #fff;
+}
+
+.shirt-back {
+  width: 42%;
+  height: 10%;
+  border-radius: 100% / 20%;
+  border: 0.5vmin solid;
+  top: 88%;
+  left: 13%;
+  transform: rotate(6deg);
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, -110%); }
+  50% { transform: translate(0, -125%); }
+}
+
+#youtube span {
+/*   font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden; */
+  animation: float 3s infinite;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1vmin;
+  font-size: 1.75vmin;
+  font-family: Arial, sans-serif;
+  background: #222;
+  color: #eee;
+  border-radius: 10%;
+  transform: translate(0, -120%);
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+  <article role="img">
+    <div class="ear"></div>
+    <div class="hair-back"></div>
+    <div class="shirt-back"></div>
+    <div class="neck"></div>
+    <div class="shirt"></div>
+    <div class="face">
+      <div class="forehead"></div>
+      <div class="hair-side"></div>
+      <div class="ear"></div>
+      <div class="eye"></div>
+      <div class="nose"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+      <div class="eyebrow"></div>
+      <div class="eyebrow"></div>
+      <div class="hair-top"></div>
+    </div>
+  </article>
+  
+  <a id="youtube" href="https://www.youtube.com/watch?v=w_C7efYKJF4" target="_blank">
+    <span></span>
+  </a>
+  
+</body>
+</html>
