@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<title>التكنولوجيا والبرمجة/فلسطين</title>
+<link rel="icon" href="Safa2qTp0.png"/>
+
+<style>
+
+.container {
+  margin: 40px auto;
+  max-width: 60em;
+  font-family: Tahoma,sans-serif; 
+}
+.container,
+.shapes{
+  display: flex;
+  justify-content: space-around;
+}
+.container>div{
+  display: flex;
+  flex-direction: column;
+}
+.shapes>div{
+  width: 100px;
+  height: 100px;
+  background:blue;
+  margin-right: 4px;
+}
+.example1{
+  border-radius: 50%;
+}
+.example2{
+  border-radius: 20px 25% 50% 12px;
+}
+.example3{
+  border-radius: 69% 31% 28% 72% / 58% 55% 45% 42%; 
+}
+
+.wrapper{
+  margin: 40px auto;
+  max-width: 60em;
+  font-family: Tahoma,sans-serif; 
+}
+
+.borders {
+	width: 300px;
+	height: 300px;
+	border-radius: 100px;
+	border-left: 30px solid red;
+	border-right: 30px solid red;
+}
+ 
+.wrapper,
+.shapes{
+  display: flex;
+  justify-content: space-around;
+}
+.wrapper>div{
+  display: flex;
+  flex-direction: column;
+}
+.shapes>div{
+  width: 100px;
+  height: 100px;
+  background:orange;
+  margin-right: 8px;  
+}
+
+.example-clippath1{
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)
+}
+.example-clippath2{
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);  
+}
+.example-clippath3{
+  clip-path: polygon(38% 34%, 100% 55%, 75% 100%, 0 100%);
+} */
+
+
+/* //gradient */
+.gradient {
+  height: 100px;
+  background-color: red;
+  background-image:
+    linear-gradient(
+      to right, 
+      red, 
+      #f06d06, 
+      rgb(255, 255, 0), 
+      green
+    );
+}
+
+</style>
+</head>
+<body>
+
+</style>
+
+
+<div class="container">
+  <div>
+    <h2>ابدأ بسيطاً</h2>
+    <div class="shapes">
+      <div class = "default"></div>
+    </div>
+  </div>
+  <div>
+    <h2>نشير إليها والبقية عليك</h2>
+    <div class="shapes">
+      <div class="example1"></div>
+      <div class="example2"></div>
+      <div class="example3"></div>
+    </div>
+  </div>
+</div>
+<div class ="wrapper">
+  <div>
+    <h2>ابدأ الآن</h2>
+    <div class="shapes">
+      <div class = "default"></div>
+    </div>
+  </div>
+  <div>
+    <h2>أحسن التصور والوصف</h2>
+    <div class="shapes">
+      <div class = "example-clippath1"></div>
+      <div class = "example-clippath2"></div>
+      <div class = "example-clippath3"></div>
+    </div>
+  </div>
+</div>
+
+
+<h2>من يطبق يستفيد</h2>
+<div class="gradient">
+  
+</div>
+
+</body>
+</html>
