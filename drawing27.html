@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التكنولوجيا والبرمجة/فلسطين</title>
+<link rel="icon" href="Safa2qTp0.png"/>
+
+<style>
+
+body {
+  padding: 50px 200px;
+}
+
+div {
+  margin-bottom: 60px;
+}
+
+.romb {
+  background:  red;
+  width: 8em;
+  height: 8em;
+  transform: skewX(30deg)
+             scaleY(.866);
+}
+
+.hexagon {
+  border: 1px solid #CCC;
+  position: relative;
+  width: 8em; height: 8em;
+  overflow: hidden;
+  transform: skewX(30deg)
+             scaleY(.866);
+  
+  &:before {
+    content: "";
+    background: red;
+    position: absolute;
+    width: 100%; height: 100%;
+    transform: scaleY(1.155)
+               skewX(-30deg)
+               rotate(30deg)
+               scaleX(.866); 
+  }
+}
+
+.triangle {
+  border: 1px solid #CCC;
+  position: relative;
+  width: 8em; height: 8em;
+  overflow: hidden;
+  transform: skewX(30deg)
+             scaleY(.866);
+  
+  &:before {
+    content: "";
+    background: red;
+    position: absolute;
+    width: 100%; height: 100%;
+    transform: scaleY(1.155)
+               skewX(-30deg)
+               rotate(30deg)
+               translateX(50%);
+  }
+}
+
+.pentagon {
+  margin: 100px 0;
+  border: 1px solid #CCC;
+  position: relative;
+  overflow: hidden;
+  width: 10em; height: 10em;  
+  transform: rotate(-36deg)
+             skewX(18deg)
+             scaleY(.951);
+}
+
+
+.pentagon__inner {
+  border: 1px solid #CCC;
+  overflow: hidden;
+  position: absolute;
+  width: 100%; height: 100%;
+  transform: scaleY(1.051)
+             skewX(-18deg)
+             rotate(36deg)
+             translateY(-36.33%)
+             rotate(18deg)
+             skewY(54deg)
+             scaleX(.588);
+}
+
+.pentagon__inner:before {
+  content: "";
+  background: red;
+  position: absolute;
+  width: 100%; height: 100%;
+  transform: scaleX(1.7)
+             skewY(-54deg)
+             rotate(-18deg)
+             translateY(-13.67%);
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+  <div class="romb"></div>
+  <div class="hexagon"></div>
+  <div class="triangle"></div>
+  <div class="pentagon">
+    <div class="pentagon__inner"></div>
+  </div>
+
+</body>
+</html>
