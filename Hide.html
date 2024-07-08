@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* تنسيق الصفحة */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* تنسيق الزر */
+        #myButton {
+            background-color: #f00; /* لون الخلفية */
+            color: #fff; /* لون النص */
+            font-size: 18px; /* حجم الخط */
+            padding: 10px 20px; /* هوامش داخلية للزر */
+            border: none; /* إزالة الحدود */
+            border-radius: 10px; /* حواف مستديرة */
+            cursor: pointer; /* تغيير شكل المؤشر عند التحويل فوق الزر */
+        }
+    </style>
+</head>
+<body>
+    <!-- زر الإظهار -->
+    <button id="myButton">إظهار</button>
+
+    <!-- النص المخفي -->
+    <p id="myText" style="display: none;">نشير إليها والبقية عليك</p>
+
+    <script>
+        const button = document.getElementById('myButton');
+        const text = document.getElementById('myText');
+
+        // استجابة للنقر على الزر
+        button.addEventListener('click', () => {
+            if (text.style.display === 'none') {
+                text.style.display = 'block'; // عرض النص
+                button.textContent = 'إخفاء'; // تغيير نص الزر
+            } else {
+                text.style.display = 'none'; // إخفاء النص
+                button.textContent = 'إظهار'; // تغيير نص الزر
+            }
+        });
+    </script>
+</body>
+</html>
