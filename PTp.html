@@ -39,7 +39,7 @@
 <!-- HTML -->   
 <div class="container">
     <p id="Paragraph">المعارف النافعة لا تنفع إلا من يطبقها</p>
-    <a href="PTp.pdf" id="Link">نشير إليها</a>
+    <a href="PTp.pdf" id="PTpLink">نشير إليها</a>
     <img src="Palestine.png" alt="النسر">
     <button>التكنولوجيا والبرمجة</button>
 </div>
@@ -52,12 +52,11 @@ function() {
 this.style.color = this.style.color === 
 "black" ? "blue" : "black";});
 
-const link = document.getElementById('Link');
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            alert('هذا الملف متجدد يومياً على نفس الرابط');
-            window.location.href = link.href; 
-        });
+const link = document.getElementById('PTpLink');
+link.addEventListener('click', (event) => {
+event.preventDefault();
+alert('ملف متجدد يومياً على نفس الرابط');
+window.location.href = link.href;});
 </script>
     
 </body>
