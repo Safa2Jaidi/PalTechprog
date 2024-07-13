@@ -6,8 +6,6 @@
     .container {
         width: 60%;
         margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
         align-items: center;
         text-align: center;
         display: flex;
@@ -38,10 +36,10 @@
     </style>
 </head>
 <body>
-    <!-- HTML -->   
+<!-- HTML -->   
 <div class="container">
     <p id="Paragraph">المعارف النافعة لا تنفع إلا من يطبقها</p>
-    <a href="https://drive.google.com/file/d/1cyIWEL9rmAYJfCggWMLTBFbWoOTAxwhP/view?usp=sharing">نشير إليها والبقية عليك</a>
+    <a href="PTp.pdf" id="Link">نشير إليها</a>
     <img src="Palestine.png" alt="النسر">
     <button>التكنولوجيا والبرمجة</button>
 </div>
@@ -53,7 +51,16 @@ document.getElementById
 function() {
 this.style.color = this.style.color === 
 "black" ? "blue" : "black";});
+
+const link = document.getElementById('Link');
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            alert('هذا الملف متجدد يومياً على نفس الرابط');
+            window.location.href = link.href; 
+        });
 </script>
     
 </body>
 </html>
+    
+    
