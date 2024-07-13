@@ -3,18 +3,29 @@
 
     <style>
     /* CSS */
+    .container {
+        width: 60%;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
     p {
         text-align: right;
         color: blue;
         font-size: 18px;
-        }
+    }
     a {
         color: red;
         font-family: Arial, sans-serif;
-        }
+    }
     img {
     width: 100%;
-    max-width: 600px;
+    max-width: 200px;
     height: auto;
     }
     button {
@@ -25,20 +36,24 @@
     border-radius: 8px;
     }
     </style>
-
 </head>
 <body>
     <!-- HTML -->   
-<div>
-    <p>المعارف النافعة لا تنفع إلا من يطبقها</p>
-    <a href="https://www.eschool.edu.ps/">مدرستي</a>
+<div class="container">
+    <p id="Paragraph">المعارف النافعة لا تنفع إلا من يطبقها</p>
+    <a href="https://www.eschool.edu.ps/">نشير إليها والبقية عليك</a>
     <img src="Palestine.png" alt="النسر">
-    <button>نشير إليها</button>
+    <button>التكنولوجيا والبرمجة</button>
 </div>
 
-    <script>
-    /* JS */
-    </script>
+<script>
+/* JS */
+document.getElementById
+("Paragraph").addEventListener("click", 
+function() {
+this.style.color = this.style.color === 
+"black" ? "blue" : "black";});
+</script>
     
 </body>
 </html>
