@@ -60,11 +60,7 @@ text-align: right;
 color: black;
 font-size: 20px;
 }
-.pPTP {
-text-align: right;
-color: black;
-font-size: 14px;
-}
+
 a {
 font-size: 20px;
 color: red;
@@ -156,6 +152,15 @@ padding: 20px;
 margin-top: 10px;
 border: 1px solid #333;
 }
+
+.arabic-text {
+    direction: rtl;
+    text-align: justify;
+    text-justify: kashida;
+    font-size: 14px; 
+    line-height: 1.6;
+    color: black;
+}
 </style>
 </head>
 <body>
@@ -201,19 +206,19 @@ border: 1px solid #333;
     <div id="panel1" class="panel">
         <h3>المدرسة الشرعية</h3>
         <img src="Shar3iaGirlSchool.png" alt="صورة">
-        <p class="pPTP ">وزارة الأوقاف والشؤون الدينية الفلسطينية</p>
+        <p class="arabic-text">وزارة الأوقاف والشؤون الدينية الفلسطينية</p>
         <a href="https://www.youtube.com/watch?v=h481L5eMe-8" style="color: red;">يوتيوب</a>
     </div>
     <div id="panel2" class="panel">
         <h3>مديرية قلقيلية</h3>
-        <p class="pPTP ">وزارة التربية والتعليم/فلسطين</p>
+        <p class="arabic-text">وزارة التربية والتعليم/فلسطين</p>
         <a href="https://www.facebook.com/DirectorateofEducationQalqilia?locale=ar_AR" style="color: blue;">فيسبوك</a>
     </div>
     <div id="panel3" class="panel">
         <h3>م. صفاء جعيدي</h3>
-        <p class="pPTP ">معلمة التكنولوجيا والبرمجة في مدرسة إناث قلقيلية الشرعية </p>
+        <p class="arabic-text">معلمة (التكنولوجيا والبرمجة) في مدرسة إناث قلقيلية الشرعية.</p>
         <h3>أ. ختام عيد</h3>
-        <p class="pPTP ">مشرفة مبحث التكنولوجيا في مديرية التربية والتعليم/قلقيلية</p>
+        <p class="arabic-text">مشرفة مبحث التكنولوجيا في مديرية التربية والتعليم/قلقيلية/فلسطين.</p>
         <a href="https://drive.google.com/file/d/1cyIWEL9rmAYJfCggWMLTBFbWoOTAxwhP/view?usp=sharing" style="color:green">نشير إليها</a>
     </div>
 <a href="PTp.pdf" id="PTpLink">نشير إليها والبقية عليك</a>
@@ -221,15 +226,15 @@ border: 1px solid #333;
 <img id="PTpImage" src="Palestine.png" alt="النسر">
 <div class="button-container">
 <button id="PTpButton" class="buttonqtp">إخفاء/إظهار النسر</button>
-<button class="buttonqtp" onclick="openLink()">Safa2qTp.web.app</button>
+<button class="buttonqtp" onclick="openLink()">قواعد بيانات فايربيس</button>
 <button class="buttonqtp" onclick="openLink1()">ملف الوصول السريع</button>
 </div>
 </div>
 <div class="footer container-fluid">
     <div class="btn-group w-100" role="group">
-        <button type="button" class="btn footer-link w-100" data-target="#panel1">المدرسة الشرعية</button>
-        <button type="button" class="btn footer-link w-100" data-target="#panel2">مديرية قلقيلية</button>
-        <button type="button" class="btn footer-link w-100" data-target="#panel3">المعلمة والمشرفة</button>
+        <button type="button" class="btn footer-link w-100" data-target="#panel1">المدرسة</button>
+        <button type="button" class="btn footer-link w-100" data-target="#panel2">المديرية</button>
+        <button type="button" class="btn footer-link w-100" data-target="#panel3">من نحن</button>
     </div>
 </div>
 <script>
@@ -238,7 +243,7 @@ border: 1px solid #333;
     ("Paragraph").addEventListener("click", 
     function() {
     this.style.color = this.style.color === 
-    "black" ? "blue" : "black";});
+    "black" ? "green" : "black";});
     
     const link = document.getElementById('PTpLink');
     link.addEventListener('click', (event) => {
