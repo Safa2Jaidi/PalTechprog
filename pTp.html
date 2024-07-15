@@ -9,14 +9,48 @@
 <style>
 /* CSS */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+body{
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+}
+.footer {
+    font-family: "Cairo", sans-serif;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            
+        }
+        .btn-group .btn {
+            color: white;
+            background-color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            border-bottom: none;
+            border-top: none;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            border-radius: 0;
+        }
+        .btn-group .btn:last-child {
+            border-radius: 0;
+          
+        }
+        .btn-group .btn:hover {
+            background-color: white;
+            color: #333;
+        }
+
 .container {
 font-family: "Cairo", sans-serif;
 font-optical-sizing: auto;
 font-weight: <weight>;
 font-style: normal;
 font-variation-settings: "slnt" 0;
-margin-top: 70px;
-width: 60%;
+margin-top: 60px;
+width: 70%;
 align-items: center;
 text-align: center;
 display: flex;
@@ -115,6 +149,13 @@ margin-left: auto;
 margin: 0;
 color:whitesmoke;
 }
+.panel {
+            display: none;
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
 </style>
 </head>
 <body>
@@ -159,6 +200,24 @@ color:whitesmoke;
  
 
 <div class="container">
+    <div id="panel1" class="panel">
+        <h3>المدرسة الشرعية</h3>
+        <img src="Shar3iaGirlSchool.png" alt="صورة">
+        <p>وزارة الأوقاف والشؤون الدينية الفلسطينية</p>
+        <a href="https://www.youtube.com/watch?v=h481L5eMe-8" style="color: red;">يوتيوب</a>
+    </div>
+    <div id="panel2" class="panel">
+        <h3>مديرية قلقيلية</h3>
+        <p>وزارة التربية والتعليم/فلسطين</p>
+        <a href="https://www.facebook.com/DirectorateofEducationQalqilia?locale=ar_AR" style="color: blue;">فيسبوك</a>
+    </div>
+    <div id="panel3" class="panel">
+        <h4>المعلمة: م. صفاء جعيدي</h3>
+        <p>معلمة التكنولوجيا والبرمجة في مدرسة إناث قلقيلية الشرعية </p>
+        <h4>المشرفة التربوية: أ. ختام عيد</h3>
+        <p>مشرفة مبحث التكنولوجيا في مديرية التربية والتعليم/قلقيلية</p>
+        <a href="https://drive.google.com/file/d/1cyIWEL9rmAYJfCggWMLTBFbWoOTAxwhP/view?usp=sharing" style="color:green">نشير إليها</a>
+    </div>
 <a href="PTp.pdf" id="PTpLink">نشير إليها والبقية عليك</a>
 <p id="Paragraph">أهلاً بك</p>
 <img id="PTpImage" src="Palestine.png" alt="النسر">
@@ -169,41 +228,27 @@ color:whitesmoke;
 </div>
 </div>
 
+<div class="footer container-fluid">
+    <div class="btn-group w-100" role="group">
+        <button type="button" class="btn footer-link w-100" data-target="#panel1">المدرسة الشرعية</button>
+        <button type="button" class="btn footer-link w-100" data-target="#panel2">مديرية قلقيلية</button>
+        <button type="button" class="btn footer-link w-100" data-target="#panel3">المعلمة والمشرفة</button>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
-/* JS */
-document.getElementById
-("Paragraph").addEventListener("click", 
-function() {
-this.style.color = this.style.color === 
-"black" ? "blue" : "black";});
-
-const link = document.getElementById('PTpLink');
-link.addEventListener('click', (event) => {
-event.preventDefault();
-alert('ملف متجدد يومياً على نفس الرابط');
-window.location.href = link.href;});
-
-document.getElementById
-('PTpImage').addEventListener
-('click', function() {
-this.classList.toggle('PTp');
-});
-
-document.getElementById
-('PTpButton').addEventListener('click', function() {
-const image = document.getElementById('PTpImage');
-if (image.style.display === 'none') {
-image.style.display = 'block';} else {
-image.style.display = 'none';}});
-
-function openLink() {
-window.open("https://safa2qtp.web.app/", "_blank");
-}
-
-function openLink1() {
-window.open("https://drive.google.com/file/d/12l3FwBkEsHEt0S6yybuTJ8wrKpVYhW1X/view?usp=sharing", "_blank");
-}
- 
+    $(document).ready(function() {
+        $('.footer-link').click(function(e) {
+            e.preventDefault();
+            var target = $(this).data('target');
+            $('.panel').hide();
+            $(target).show();
+        });
+    });
 </script>
 </body>
 </html>
