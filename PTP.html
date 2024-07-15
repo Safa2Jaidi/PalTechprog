@@ -41,10 +41,19 @@ transition: 0.5s;
 img.PTp {
 filter: grayscale(100%);
 }
-button {
+
+.button-container {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.buttonqtp {
+flex: 1;
+padding: 10px 20px;       
+cursor: pointer;
+text-align: center;
 background-color: #333;
 color: white;
-padding: 10px 20px;
 border: none;
 border-radius: 8px;
 }
@@ -153,7 +162,11 @@ color:whitesmoke;
 <a href="PTp.pdf" id="PTpLink">نشير إليها والبقية عليك</a>
 <p id="Paragraph">أهلاً بك</p>
 <img id="PTpImage" src="Palestine.png" alt="النسر">
-<button id="PTpButton">التكنولوجيا والبرمجة</button>
+<div class="button-container">
+<button id="PTpButton" class="buttonqtp">إخفاء/إظهار النسر</button>
+<button class="buttonqtp" onclick="openLink()">Safa2qTp.web.app</button>
+<button class="buttonqtp" onclick="openLink1()">ملف الوصول السريع</button>
+</div>
 </div>
 
 <script>
@@ -182,6 +195,15 @@ const image = document.getElementById('PTpImage');
 if (image.style.display === 'none') {
 image.style.display = 'block';} else {
 image.style.display = 'none';}});
+
+function openLink() {
+window.open("https://safa2qtp.web.app/", "_blank");
+}
+
+function openLink1() {
+window.open("https://drive.google.com/file/d/12l3FwBkEsHEt0S6yybuTJ8wrKpVYhW1X/view?usp=sharing", "_blank");
+}
+ 
 </script>
 </body>
 </html>
