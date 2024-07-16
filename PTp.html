@@ -43,8 +43,9 @@ border-radius: 0;
 border-right: none;
 }
 .btn-group .btn:hover {
-background-color: white;
+background-color: whitesmoke;
 color: #333;
+transition: background-color 1s, color 0.3s;
 }
 .container {
 font-family: "Cairo", sans-serif;
@@ -52,18 +53,18 @@ font-optical-sizing: auto;
 font-weight: <weight>;
 font-style: normal;
 font-variation-settings: "slnt" 0;
-margin-top: 60px;
+margin-top: 70px;
 width: 70%;
 align-items: center;
 text-align: center;
 display: flex;
 flex-direction: column;
 gap: 10px;
-margin-bottom: 200px;
+margin-bottom: 100px;
 }
 p {
 text-align: right;
-color: black;
+color: #333;
 font-size: 20px;
 }
 
@@ -92,16 +93,20 @@ padding: 10px 20px;
 cursor: pointer;
 text-align: center;
 background-color: #333;
-color: white;
+color: whitesmoke;
 border: none;
 border-radius: 8px;
+}
+.buttonqtp:hover {
+background-color: whitesmoke;
+color: #333 !important;
+border: 1px solid #333; 
+transition: background-color 1s, color 0.3s;
 }
 .navbar-nav .nav-link {
 text-align: right;
 } 
-.dropdown-menu {
-text-align: right;
-}
+
 .logo {
 position: fixed;
 top: 0px;
@@ -120,16 +125,18 @@ margin-right: 5px;
 .navbar {
 background-color: #333; 
 }    
-.dropdown-menu {
-background-color: #333; 
-}
-.navbar-brand, .nav-link, .dropdown-item {
+
+.navbar-brand, .nav-link {
 color: whitesmoke !important; 
 font-family: "Cairo", sans-serif;
 font-optical-sizing: auto;
 font-weight: <weight>;
 font-style: normal;
 font-variation-settings: "slnt" 0;
+}
+.dropdown-menu {
+text-align: right;
+background-color: whitesmoke;
 }
 .navbar-toggler {
 border: 1px solid whitesmoke; 
@@ -142,9 +149,12 @@ outline: 2px solid whitesmoke;
 }
 .dropdown-item {
 text-align: right;
+font-size: medium;
 }
 .dropdown-item:hover {
-color: black !important; 
+background-color: #333;
+color: whitesmoke !important; 
+transition: background-color 1s, color 0.3s;
 }
 .navbar-toggler{
 margin-left: auto;
@@ -162,11 +172,44 @@ border: 1px solid #333;
 .arabic-text {
     direction: rtl;
     text-align: justify;
-    text-justify: kashida;
     font-size: 14px; 
-    line-height: 1.6;
-    color: black;
+    line-height: 1.2;
+    color: #333;
+    font-family: Arial, sans-serif;
 }
+.Shar3ia{
+max-width: 50%;
+}
+.links {
+display: inline;
+white-space: nowrap;
+}
+.separator {
+display: inline;
+white-space: nowrap;
+margin: 0 5px; 
+}
+.responsive-img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .fullsize-img {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .fullsize-img img {
+            max-width: 100%;
+            max-height: 100%;
+object-fit: contain;
+        }
 </style>
 </head>
 <body>
@@ -181,27 +224,24 @@ border: 1px solid #333;
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="https://drive.google.com/file/d/1x-Y8WUHMdxEIMJFh2gHzDqEn0HhLP2O9/view?usp=sharing">برمجة المواقع</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://youtube.com/playlist?list=PL6qKzftU_wpXzPJJyzHrhc43jzXgD_Xkn&feature=shared">المونتاج بكل بساطة</a>
+                        <a class="nav-link" href="https://youtube.com/playlist?list=PL6qKzftU_wpXzPJJyzHrhc43jzXgD_Xkn&feature=shared">المونتاج ببساطة</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://drive.google.com/drive/folders/1AtTqwaO6IsDoXFKSs8ubDojWCGo4fda1?usp=sharing">الأهداف والتحقق والتقييم</a>
+                            <a class="nav-link" href="https://drive.google.com/drive/folders/1AtTqwaO6IsDoXFKSs8ubDojWCGo4fda1?usp=sharing">أهداف وتحقق وتقييم</a>
                           </li>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 إلكترونيات المنهاج الفلسطيني
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="https://drive.google.com/file/d/1avtutGvlZHHRrYrXeTq4Ya9IDGbJKg9X/view?usp=sharing">ملف الوصول</a></li>
-                                <li><a class="dropdown-item" href="https://youtube.com/playlist?list=PL6qKzftU_wpXHoTJHKKE7GliBNSDnCoT1&feature=shared">قائمة التشغيل</a></li>
-                                <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1DMxgMfxLlZG9OsIBpLo-ehTG7O4aQYbK?usp=sharing">مجلد العمل</a></li>
+                                <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1DMxgMfxLlZG9OsIBpLo-ehTG7O4aQYbK?usp=sharing">مجلد الإلكترونيات</a></li>
+                                <li><a class="dropdown-item" href="https://drive.google.com/file/d/1avtutGvlZHHRrYrXeTq4Ya9IDGbJKg9X/view?usp=sharing">ملف الوصول السريع</a></li>
+                                <li><a class="dropdown-item" href="https://youtube.com/playlist?list=PL6qKzftU_wpXHoTJHKKE7GliBNSDnCoT1&feature=shared">قائمة تشغيل الفيديوهات</a></li>
                             </ul>
                         </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">نشير إليها والبقية عليك</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://drive.google.com/file/d/1uQ84gUlQFhHxBDdUIWcxcgzcBJS2KYQv/view?usp=sharing">نشير إليها والبقية عليك</a>
+                        </li>
                 </ul>
             </div>
         </div>
@@ -211,13 +251,15 @@ border: 1px solid #333;
 <div class="container">
     <div id="panel1" class="panel">
         <h3>المدرسة الشرعية</h3>
-        <img src="Shar3iaGirlSchool.png" alt="صورة">
-        <p class="arabic-text">وزارة الأوقاف والشؤون الدينية الفلسطينية</p>
-        <a href="https://www.youtube.com/watch?v=h481L5eMe-8" style="color: red;">يوتيوب</a>
+        <img class="Shar3ia" src="Shar3iaGirlSchool.png" alt="صورة">
+        <p class="arabic-text">مدرسة حكومية، تابعة لوزارة الأوقاف والشؤون الدينية الفلسطينية، تدرس الصفوف من السادس حتى التوجيهي.</p>
+        <a class="links" href="https://www.youtube.com/watch?v=h481L5eMe-8" style="color: red;">يوتيوب</a>
+        <span class="separator">|</span>
+        <a class="links" href="https://www.youtube.com/watch?v=h481L5eMe-8" style="color: blue;">فيسبوك</a>
     </div>
     <div id="panel2" class="panel">
         <h3>مديرية قلقيلية</h3>
-        <p class="arabic-text">وزارة التربية والتعليم/فلسطين</p>
+        <p class="arabic-text">وزارة التربية والتعليم/فلسطين.</p>
         <a href="https://www.facebook.com/DirectorateofEducationQalqilia?locale=ar_AR" style="color: blue;">فيسبوك</a>
     </div>
     <div id="panel3" class="panel">
@@ -225,16 +267,21 @@ border: 1px solid #333;
         <p class="arabic-text">معلمة (التكنولوجيا والبرمجة) في مدرسة إناث قلقيلية الشرعية.</p>
         <h3>أ. ختام عيد</h3>
         <p class="arabic-text">مشرفة مبحث التكنولوجيا في مديرية التربية والتعليم/قلقيلية/فلسطين.</p>
-        <a href="https://drive.google.com/file/d/1cyIWEL9rmAYJfCggWMLTBFbWoOTAxwhP/view?usp=sharing" style="color:green">نشير إليها</a>
+        <a href="https://drive.google.com/file/d/1cyIWEL9rmAYJfCggWMLTBFbWoOTAxwhP/view?usp=sharing" style="color: green;">نشير إليها</a>
     </div>
-<a href="PTP.pdf" id="PTpLink">نشير إليها والبقية عليك</a>
-<p id="Paragraph">أهلاً بك</p>
+<a href="https://drive.google.com/file/d/1uQ84gUlQFhHxBDdUIWcxcgzcBJS2KYQv/view?usp=sharing" id="PTpLink">نشير إليها والبقية عليك</a>
+<p id="Paragraph">أهلاً ومرحباً بك</p>
 <img id="PTpImage" src="Palestine.png" alt="النسر">
 <div class="button-container">
 <button id="PTpButton" class="buttonqtp">إخفاء/إظهار النسر</button>
-<button class="buttonqtp" onclick="openLink()">قواعد بيانات فايربيس</button>
+<button class="buttonqtp" onclick="openLink()">تطبيق ويب/فايربيس</button>
 <button class="buttonqtp" onclick="openLink1()">ملف الوصول السريع</button>
+<button class="buttonqtp" onclick="openLink2()">مقاطع برمجية للتجربة</button>
 </div>
+<img src="Welcome.png" alt="مصغرة نشير إليها" class="responsive-img" onclick="showFullSizeImage()">
+    <div class="fullsize-img" id="fullsizeImg" onclick="hideFullSizeImage()">
+        <img src="Welcome.png" alt="إعلان نشير إليها">
+    </div>
 </div>
 <div class="footer container-fluid">
     <div class="btn-group w-100" role="group">
@@ -254,7 +301,7 @@ border: 1px solid #333;
     const link = document.getElementById('PTpLink');
     link.addEventListener('click', (event) => {
     event.preventDefault();
-    alert('ملف متجدد يومياً على نفس الرابط');
+    alert('الملفات المشار إليها هنا متجددة على نفس الرابط');
     window.location.href = link.href;});
     
     document.getElementById
@@ -277,20 +324,37 @@ border: 1px solid #333;
         function openLink1() {
             window.open('https://drive.google.com/file/d/12l3FwBkEsHEt0S6yybuTJ8wrKpVYhW1X/view?usp=sharing', '_blank', 'noopener,noreferrer');
         }
+
+        function openLink2() {
+            window.open('https://drive.google.com/file/d/1x-Y8WUHMdxEIMJFh2gHzDqEn0HhLP2O9/view?usp=sharing', '_blank', 'noopener,noreferrer');
+        }
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js">
     </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.footer-link').click(function(e) {
-            e.preventDefault();
-            var target = $(this).data('target');
+   $(document).ready(function() {
+    $('.footer-link').click(function(e) {
+        e.preventDefault();
+        var target = $(this).data('target');
+        if ($(target).is(':visible')) {
+            $(target).hide();
+        } else {
             $('.panel').hide();
             $(target).show();
-        });
+        }
     });
+});
+</script>
+<script>
+    function showFullSizeImage() {
+        document.getElementById('fullsizeImg').style.display = 'flex';
+    }
+
+    function hideFullSizeImage() {
+        document.getElementById('fullsizeImg').style.display = 'none';
+    }
 </script>
 </body>
 </html>
